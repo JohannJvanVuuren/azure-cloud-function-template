@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb59d2d-8967-4af8-914f-32ff2293ab6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deployAzureResources.yml.disabled" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/host.json" beforeDir="false" afterPath="$PROJECT_DIR$/host.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/applicationInsights.bicep" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/applicationInsights.bicep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/functionApp.bicep" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/functionApp.bicep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/modules/hostingPlan.bicep" beforeDir="false" afterPath="$PROJECT_DIR$/infra/modules/hostingPlan.bicep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.md" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/functions/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="GitHub Workflow" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,61 +31,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0001231064827876" />
-      <entry key="S2" value="1.1592044160402932" />
-      <entry key="S5" value="2.2550067688991153" />
-      <entry key="S10" value="4.24794104110793" />
-      <entry key="S30" value="8.078721927492047" />
-      <entry key="S60" value="10.10686208618448" />
-      <entry key="M2" value="13.303201798494843" />
-      <entry key="M5" value="23.0726296380257" />
-      <entry key="M10" value="34.311566866303835" />
-      <entry key="M15" value="41.21210349559525" />
-      <entry key="M30" value="51.65911882888566" />
-      <entry key="H1" value="59.1324089189409" />
-      <entry key="H2" value="63.70748481550882" />
-      <entry key="H4" value="66.25512143969775" />
-      <entry key="D1" value="68.52798009309161" />
-      <entry key="W1" value="68.9322008912202" />
+      <entry key="MS100" value="1.000000000000149" />
+      <entry key="MS500" value="1.0027203357396057" />
+      <entry key="S2" value="1.2341686892930515" />
+      <entry key="S5" value="1.7448896024727563" />
+      <entry key="S10" value="2.5833030944914226" />
+      <entry key="S30" value="6.844323372757295" />
+      <entry key="S60" value="13.11584254775003" />
+      <entry key="M2" value="20.445518371444134" />
+      <entry key="M5" value="32.37645446109717" />
+      <entry key="M10" value="51.457934082460255" />
+      <entry key="M15" value="69.78364059906016" />
+      <entry key="M30" value="113.59012251081823" />
+      <entry key="H1" value="166.40272333165433" />
+      <entry key="H2" value="214.59611329145142" />
+      <entry key="H4" value="249.0544138106134" />
+      <entry key="D1" value="285.6225129779373" />
+      <entry key="W1" value="292.7790427095952" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.120037659997259E-269" />
-      <entry key="S2" value="8.011711396660736E-68" />
-      <entry key="S5" value="1.4504077730777142E-27" />
-      <entry key="S10" value="3.808421948539959E-14" />
-      <entry key="S30" value="3.367262284425496E-5" />
-      <entry key="S60" value="0.0060568711151481" />
-      <entry key="M2" value="0.10289775445817496" />
-      <entry key="M5" value="0.8182349717794541" />
-      <entry key="M10" value="1.9074244488031098" />
-      <entry key="M15" value="2.656239837795972" />
-      <entry key="M30" value="3.869283668402321" />
-      <entry key="H1" value="4.775417358580067" />
-      <entry key="H2" value="5.3401699540822305" />
-      <entry key="H4" value="5.657051236105991" />
-      <entry key="D1" value="5.9409241300088045" />
-      <entry key="W1" value="5.99151215017063" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.0327625023121119E-132" />
+      <entry key="S5" value="1.6054625686663758E-53" />
+      <entry key="S10" value="4.0068349697806E-27" />
+      <entry key="S30" value="1.611558589280829E-9" />
+      <entry key="S60" value="4.467592473511182E-5" />
+      <entry key="M2" value="0.00851146378273077" />
+      <entry key="M5" value="0.22770109087867557" />
+      <entry key="M10" value="0.8477271592738423" />
+      <entry key="M15" value="1.5426819377023382" />
+      <entry key="M30" value="3.548760106566858" />
+      <entry key="H1" value="6.483819370499333" />
+      <entry key="H2" value="9.51590573109669" />
+      <entry key="H4" value="11.83374086650769" />
+      <entry key="D1" value="14.399173513132038" />
+      <entry key="W1" value="14.912153548696885" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6198538499694932" />
-      <entry key="MS500" value="0.908802592039937" />
-      <entry key="S2" value="1.0990938116679092" />
-      <entry key="S5" value="2.166581995751365" />
-      <entry key="S10" value="4.160030468101199" />
-      <entry key="S30" value="8.026116181242758" />
-      <entry key="S60" value="10.075738148971764" />
-      <entry key="M2" value="13.363439499059696" />
-      <entry key="M5" value="23.82351337852344" />
-      <entry key="M10" value="36.149462701007096" />
-      <entry key="M15" value="43.80567356928977" />
-      <entry key="M30" value="55.48376010252511" />
-      <entry key="H1" value="63.88047889255617" />
-      <entry key="H2" value="69.03240202227292" />
-      <entry key="H4" value="71.90410120531138" />
-      <entry key="D1" value="74.46749231500756" />
-      <entry key="W1" value="74.92350964022977" />
+      <entry key="MS100" value="0.9592641193254042" />
+      <entry key="MS500" value="0.9944033366581487" />
+      <entry key="S2" value="1.231362271987381" />
+      <entry key="S5" value="1.7431237229719956" />
+      <entry key="S10" value="2.5818611150229174" />
+      <entry key="S30" value="6.842766553366866" />
+      <entry key="S60" value="13.114252396567121" />
+      <entry key="M2" value="20.451950775023338" />
+      <entry key="M5" value="32.593067935020564" />
+      <entry key="M10" value="52.285231953635986" />
+      <entry key="M15" value="71.30273851897567" />
+      <entry key="M30" value="117.11350113336567" />
+      <entry key="H1" value="172.8628397718598" />
+      <entry key="H2" value="224.0938353663964" />
+      <entry key="H4" value="260.87649742673153" />
+      <entry key="D1" value="300.0192534607932" />
+      <entry key="W1" value="307.69083443714027" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -118,7 +121,7 @@
     "nodejs_package_manager_path": "pnpm",
     "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\johann\\azure-cloud-function-template\\node_modules\\.pnpm\\@typescript+typescript-linux-x64@7.0.2\\node_modules\\@typescript\\typescript-linux-x64\\lib"
+    "ts.external.directory.path": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\johann\\azure-cloud-function-template\\node_modules\\.pnpm\\@typescript+typescript-linux-x64@7.0.1-rc\\node_modules\\@typescript\\typescript-linux-x64\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -147,6 +150,7 @@
       <workItem from="1790581662192" duration="377000" />
       <workItem from="1790582709438" duration="432000" />
       <workItem from="1790584649895" duration="1615000" />
+      <workItem from="1790586353410" duration="8302000" />
     </task>
     <servers />
   </component>

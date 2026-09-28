@@ -23,9 +23,9 @@ export async function hello(
     requestBody = await request.json();
   } catch (error: unknown) {
     if (error instanceof Error) {
-      console.error(error.message)
+      context.error(error.message)
     } else {
-      console.error(`Unknown error: ${error}`);
+      context.error(`Unknown error: ${error}`);
     }
   }
   const email = requestBody?.email ?? "Unknown";

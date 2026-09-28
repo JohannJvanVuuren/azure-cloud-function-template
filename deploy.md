@@ -1,10 +1,18 @@
-# Create a resource group
-az group create --name rg-ts-functions --location eastus
+# Install Azure CLI
+## Windows
+```winget install Microsoft.AzureCLI```
 
-# Deploy the Bicep template
-az deployment group create \
---resource-group rg-ts-functions \
---template-file infrastructure/main.bicep
+## Linux (Ubuntu / Debian)
+```curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash```
 
-# Deploy Function Code
-func azure functionapp publish <YOUR_FUNCTION_APP_NAME>
+## macOS
+```brew update && brew install azure-cli```
+
+# Get Azure Deployment Credentials
+## Setup Service Principle
+az ad sp create-for-rbac --name "YourSPName" --role contributor --scopes /subscriptions/yourSubscriptionId
+
+Add this as a repo secret in GitHub
+
+# Implementation
+Create a GitHub Repo and after adding the credentials to the repo secrets, remove the ```disabled``` after the ```.github/workflows/deployAzureResources.yml.disabled``` push this code to the repo. 
