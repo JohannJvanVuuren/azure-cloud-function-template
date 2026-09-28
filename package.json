@@ -1,0 +1,25 @@
+{
+  "name": "azure-cloud-function-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/functions/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@azure/functions": "^4.16.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "typescript": "^7.0.2"
+  }
+}
