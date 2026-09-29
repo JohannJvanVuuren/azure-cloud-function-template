@@ -23,9 +23,23 @@ param location string = resourceGroup().location
 // -----------------------------------------------------------------------------
 
 @description('The pricing SKU name for the hosting plan, e.g. "Y1" (Consumption) or "EP1" (Premium).')
+@allowed([
+  'Y1'
+  'EP1'
+  'EP2'
+  'EP3'
+  'P1V2'
+  'P1V3'
+])
 param hostingPlanSKU string = 'Y1'
 
 @description('The pricing SKU tier for the hosting plan, e.g. "Dynamic" (Consumption) or "ElasticPremium" (Premium).')
+@allowed([
+  'Dynamic'
+  'ElasticPremium'
+  'PremiumV2'
+  'PremiumV3'
+])
 param hostingPlanSKUTier string = 'Dynamic'
 
 @description('Derived name of the App Service Plan that hosts the Function App.')
@@ -46,9 +60,23 @@ module hostingPlan './modules/hostingPlan.bicep' = {
 // -----------------------------------------------------------------------------
 
 @description('The SKU for the storage account backing the Function App (triggers, bindings, and the content file share).')
+@allowed([
+  'Standard_LRS'
+  'Standard_GRS'
+  'Standard_RAGRS'
+  'Standard_ZRS'
+  'Premium_LRS'
+])
 param storageAccountSku string = 'Standard_LRS'
 
 @description('The kind of storage account to provision.')
+@allowed([
+  'Storage'
+  'StorageV2'
+  'BlobStorage'
+  'BlockBlobStorage'
+  'FileStorage'
+])
 param storageAccountKind string = 'StorageV2'
 
 @description('A short, deterministic, globally-unique suffix derived from the resource group ID, used to satisfy the storage account naming constraints.')
@@ -72,15 +100,37 @@ module storageAccount './modules/storageAccount.bicep' = {
 // -----------------------------------------------------------------------------
 
 @description('The kind of Application Insights resource, e.g. "web".')
+@allowed([
+  'web'
+  'ios'
+  'other'
+  'store'
+  'java'
+  'phone'
+  'android'
+  'MobileCenter'
+])
 param applicationInsightsKind string = 'web'
 
 @description('The Application Insights application type, e.g. "web".')
+@allowed([
+  'web'
+  'other'
+])
 param applicationInsightsApplicationType string = 'web'
 
 @description('Whether public network access for telemetry ingestion is enabled.')
+@allowed([
+  'Enabled'
+  'Disabled'
+])
 param applicationInsightsPublicNetworkAccess string = 'Enabled'
 
 @description('Whether public network access for querying telemetry is enabled.')
+@allowed([
+  'Enabled'
+  'Disabled'
+])
 param applicationInsightsPublicNetworkAccessForQuery string = 'Enabled'
 
 @description('Derived name of the Application Insights instance monitoring the Function App.')
@@ -105,12 +155,30 @@ module applicationInsights './modules/applicationInsights.bicep' = {
 // Application Insights outputs produced above.
 
 @description('The kind of Function App to deploy, e.g. "functionapp" (Windows) or "functionapp,linux" (Linux).')
+@allowed([
+  'functionapp'
+  'functionapp,linux'
+])
 param functionAppKind string = 'functionapp'
 
 @description('The Node.js runtime version for the Function App, e.g. "~20". Keep this aligned with WEBSITE_NODE_DEFAULT_VERSION in functionApp.bicep and the Node.js version used by the CI/CD pipeline.')
+@allowed([
+  '~18'
+  '~20'
+  '~22'
+])
 param nodeVersion string = '~22'
 
 @description('The Azure Functions worker runtime language.')
+@allowed([
+  'node'
+  'dotnet'
+  'dotnet-isolated'
+  'java'
+  'powershell'
+  'python'
+  'custom'
+])
 param workerRuntime string = 'node'
 
 @description('Whether the Function App only accepts HTTPS traffic. Should remain true for production deployments.')
