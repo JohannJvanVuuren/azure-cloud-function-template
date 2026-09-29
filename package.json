@@ -18,8 +18,7 @@
     "@azure/functions": "^4.16.5"
   },
   "devDependencies": {
-    "@types/node": "^26.6.3",
-    "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "typescript": "7.0.1-rc"
+    "@types/node": "^22.0.0",
+    "typescript": "^7.0.2"
   }
 }
